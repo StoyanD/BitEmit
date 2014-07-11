@@ -6,25 +6,30 @@ var chai = require('chai'),
   Bitstamp = require('../lib/bitstamp').Bitstamp;
 
 
-suite('Assertions', function(){
-  test('should add', function(){
-    var bitstamp = new Bitstamp();
-    bitstamp.should.exist.and.be.an.instanceOf(BitEmit)
-      .with.property('b').that.is.a('number').that.equals(0);
-    bitstamp.add(5);
-    bitstamp.should.have.property('b').that.equals(5);
+describe('BitEmit functions', function(){
+  var bitemit = new BitEmit();
+  it('Prototype function should exist', function(){
 
+    bitemit.should.exist;
+    bitemit.should.have.property('addExchage').that.is.a('function');
+    bitemit.should.have.property('removeExchage').that.is.a('function');
+    bitemit.should.have.property('start').that.is.a('function');
+    bitemit.should.have.property('stop').that.is.a('function');
+    bitemit.should.have.property('addCrypto').that.is.a('function');
   });
-//  test('should pass on truthiness', function(){
-//    assert.ok(true);
-//  });
-//  test('should fail on falsiness', function(){
-//    assert.ok(false);
-//  });
-//  describe('aa', function(){
-//    it('returns adfafda ', function(){
-//      bitemit.a.should.be.a('number');
-//    });
-//  });
+  describe('Exchange addition and removal of cryptos', function(){
+    describe('addExchange should function correctly', function(){
+      it('addExchage(exchange, cryptoOpts, listener) should set only specifically included cryptos');
+      it('addExchage(exchange, listener) should include all cryptos on that exchange');
+    });
+    describe('removeExchange should function correctly', function(){
+      it('removeExchange(exchange) should remove the listeners attached to all the cryptos in an exchange');
+    });
+    describe('addCrypto should function correctly', function(){
+      it('addCrypto(exchange, listener) should ');
+    });
+  });
+
 
 });
+
