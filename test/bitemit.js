@@ -2,8 +2,7 @@ var chai = require('chai'),
   assert = chai.assert,
   expect = chai.expect,
   should = chai.should(),
-  BitEmit = require('../lib/bitemit').BitEmit,
-  Bitstamp = require('../lib/bitstamp').Bitstamp;
+  BitEmit = require('../lib/bitemit').BitEmit;
 
 
 describe('BitEmit functions', function(){
@@ -27,6 +26,18 @@ describe('BitEmit functions', function(){
     });
     describe('addCrypto should function correctly', function(){
       it('addCrypto(exchange, listener) should ');
+    });
+  });
+
+  describe('Starting and stopping of emitter', function(){
+    describe('Starting the emitter', function(){
+      it('should poll all the attached exchanges');
+      it('should emit only new trades');
+      it('should emit all trades since init trade tid(IF GIVEN) for particular exchanges and crypto pairs');
+    });
+    describe('Stopping the emitter', function(){
+      it('should stop the emission of any new trades');
+      it('should should hold the last emitted trades in memory')
     });
   });
 
