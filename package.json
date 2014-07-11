@@ -1,0 +1,37 @@
+{
+  "name": "bitemit",
+  "version": "0.0.0",
+  "description": "A node.js module that aggregates market data from various exchanges and brokerages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StoyanD/BitEmit.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "litecoin",
+    "darkcoin",
+    "crypto",
+    "crypto-currency",
+    "exchange",
+    "market",
+    "statistics",
+    "analytics"
+  ],
+  "author": "Stoyan Dimitrov",
+  "license":{
+      "type": "MIT",
+      "url": "https://github.com/StoyanD/BitEmit/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/StoyanD/BitEmit/issues"
+  },
+  "homepage": "https://github.com/StoyanD/BitEmit",
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "chai": "~1.9.1"
+  }
+}
