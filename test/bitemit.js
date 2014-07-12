@@ -2,12 +2,18 @@ var chai = require('chai'),
   assert = chai.assert,
   expect = chai.expect,
   should = chai.should(),
+  EventEmitter = require('events').EventEmitter,
   BitEmit = require('../lib/bitemit').BitEmit;
 
 
 describe('BitEmit functions', function(){
   var bitemit = new BitEmit();
-  it('Prototype function should exist', function(){
+
+  it('BitEmit inheritance', function(){
+    bitemit.should.be.an.instanceOf(EventEmitter);
+    bitemit.should.be.an.instanceOf(require('../lib/constants').Constants);
+  });
+  it('Prototype functions should exist', function(){
 
     bitemit.should.exist;
     bitemit.should.have.property('addExchage').that.is.a('function');
@@ -16,6 +22,8 @@ describe('BitEmit functions', function(){
     bitemit.should.have.property('stop').that.is.a('function');
     bitemit.should.have.property('addCrypto').that.is.a('function');
   });
+
+
   describe('Exchange addition and removal of cryptos', function(){
     describe('addExchange should function correctly', function(){
       it('addExchage(exchange, cryptoOpts, listener) should set only specifically included cryptos');
