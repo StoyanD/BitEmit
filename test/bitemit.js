@@ -11,7 +11,6 @@ describe('BitEmit functions', function(){
 
   it('BitEmit inheritance', function(){
     bitemit.should.be.an.instanceOf(EventEmitter);
-    bitemit.should.be.an.instanceOf(require('../lib/constants').Constants);
   });
   it('Prototype functions should exist', function(){
 
